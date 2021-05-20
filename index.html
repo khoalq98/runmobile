@@ -186,7 +186,6 @@
             let next = size;
             let isFirstime = true;
             setInterval(() => {
-                console.log('before',{next});
                 const newMessage = `<div id="div${next}" class="title">
                             <a href="#" id="${next}" class="next sender-name text-dark">${data[next].senderName} :</a>
                             <span>${data[next].message}</span>
@@ -202,7 +201,6 @@
                         isFirstime = false;
                     }
                 });
-                console.log('data.length ', data.length);
                 $(`#div${count}`).hide('slow', () => {
                     $(`#div${count}`).remove();
                     count++;
